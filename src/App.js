@@ -1,72 +1,42 @@
 import React from 'react';
-import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import flag from './flag.svg';
+import ship from './ship.svg';
+import wheel from './wheel.svg';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
-
-            <div role="banner" className="navbar-brand">
-              <h1>
-                Website Title
-                <a href="/" className="text-light logo-image">
-                  <img alt="logo" src=""></img>
-                </a>
-              </h1>
+    <div class="App">
+      <Header />
+      <div class="w75 tc">
+        <h1 class="f-subheadline lh-title">Find Your RI Dev Tribe</h1>
+      </div>
+      <div class="mw9 center ph3-ns">
+        <div class="cf ph2-ns">
+          <div class="fl w-100 w-third-ns pa2">
+            <div class="bg-white pv4 tc">
+              <img class="w4" src={ wheel } alt="Wheel"/>
+              <p>Awesome people who work on cool projects, just like you.</p>
             </div>
-
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav">
-              <li>
-                <a className="nav-link" href="/">Link #1</a>
-              </li>
-              <li>
-                <a className="nav-link" href="/">Link #2</a>
-              </li>
-              <li>
-                <a className="nav-link" href="/">Link #3</a>
-              </li>
-            </ul>
           </div>
-
-        </nav>
-
-      </header>
-
-      <div className="container-fluid">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              First
+          <div class="fl w-100 w-third-ns pa2 tc">
+            <div class="bg-white pv4">
+              <img class="w4" src={ ship } alt="Ship" />
+              <p>Share experiences and collaborate together.</p>
             </div>
-            <div className="col">
-              Second
-            </div>
-            <div className="col">
-              Third
+          </div>
+          <div class="fl w-100 w-third-ns pa2 tc">
+            <div class="bg-white pv4">
+              <img class="w4" src={ flag } alt="Flag" />
+              <p>Join us Saturdays @ 1:30 PM!</p>
             </div>
           </div>
         </div>
       </div>
-
-      <script src="./js/index.js"></script>
-
-      <footer>
-        <div className="container-fluid">
-          <div className="row">
-            <p>
-              &copy; Copyright 2019 by WebDevRI
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
-
 export default App;
+
